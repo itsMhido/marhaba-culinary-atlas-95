@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Moroccan-inspired color palette
+				morocco: {
+					terracotta: '#C35831',
+					ocre: '#D9A566',
+					safran: '#F2B705',
+					olive: '#5F7028',
+					light: '#FFF8E7',
+					dark: '#402E32'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,23 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-in-out forwards',
+			},
+			backgroundImage: {
+				'zellige-pattern': "url('/zellige-pattern.svg')"
+			},
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+				roboto: ['Roboto', 'sans-serif']
 			}
 		}
 	},
