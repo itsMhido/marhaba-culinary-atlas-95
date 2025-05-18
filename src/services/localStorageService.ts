@@ -881,6 +881,37 @@ export const localStorageService = {
         createdAt: 1791234567890,
         createdBy: '1',
       },
+      {
+        id: '24',
+        name: 'Amlou',
+        nameAr: 'أملو',
+        regionId: '9', // Souss-Massa
+        description: 'Pâte à tartiner traditionnelle berbère à base d\'amandes, d\'huile d\'argan et de miel, originaire du sud du Maroc.',
+        ingredients: [
+          '250g d\'amandes non pelées',
+          '3 cuillères à soupe de miel pur',
+          '150ml d\'huile d\'argan',
+          '1 pincée de sel',
+        ],
+        steps: [
+          'Faire griller les amandes dans un four préchauffé à 180°C pendant environ 10 minutes, en remuant de temps en temps.',
+          'Laisser refroidir les amandes avant de les mixer finement dans un robot jusqu\'à obtenir une poudre.',
+          'Continuer à mixer en ajoutant progressivement l\'huile d\'argan, jusqu\'à obtenir une pâte homogène.',
+          'Ajouter le miel et une pincée de sel, puis mixer à nouveau pour bien incorporer tous les ingrédients.',
+          'Si la texture est trop épaisse, ajouter un peu plus d\'huile d\'argan.',
+          'Transvaser la préparation dans un pot hermétique.',
+          'Conserver l\'amlou au réfrigérateur jusqu\'à 2 mois.',
+          'Servir avec du pain marocain traditionnel pour le petit déjeuner ou le goûter.',
+        ],
+        imageUrl: '/amlou.jpg',
+        category: 'entrée',
+        preparationTime: 20,
+        cookingTime: 10,
+        servings: 10,
+        difficulty: 'facile',
+        createdAt: 1801234567890,
+        createdBy: '1',
+      },
     ];
     localStorageService.setRecipes(initialRecipes);
     
