@@ -48,12 +48,12 @@ const Recipes = () => {
     }
     
     // Filtre par région
-    if (regionFilter) {
+    if (regionFilter && regionFilter !== "all-regions") {
       result = result.filter(recipe => recipe.regionId === regionFilter);
     }
     
     // Filtre par catégorie
-    if (categoryFilter) {
+    if (categoryFilter && categoryFilter !== "all-categories") {
       result = result.filter(recipe => recipe.category === categoryFilter);
     }
     
