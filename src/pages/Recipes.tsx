@@ -29,8 +29,6 @@ const Recipes = () => {
     const loadedRecipes = localStorageService.getRecipes();
     const loadedRegions = localStorageService.getRegions();
     
-    console.log("Loaded recipes:", loadedRecipes.length);
-    
     setRecipes(loadedRecipes);
     setFilteredRecipes(loadedRecipes);
     setRegions(loadedRegions);
