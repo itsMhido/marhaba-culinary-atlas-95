@@ -113,11 +113,13 @@ SelectLabel.displayName = SelectPrimitive.Label.displayName
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> & { value: string }
->(({ className, children, ...props }, ref) => {
-  // Ensure that the value is never an empty string
-  if (!props.value) {
+>(({ className, children, value, ...props }, ref) => {
+  // Enhanced validation to ensure non-empty string values
+  if (value === undefined || value === null || value === "") {
     console.error("SelectItem must have a non-empty value prop");
-    props.value = props.value || "default-value";
+    // Provide a fallback default value rather than throwing an error
+    // This way the app won't crash but we'll still see the error in console
+    value = "default-value";
   }
   
   return (
@@ -127,6 +129,7 @@ const SelectItem = React.forwardRef<
         "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
         className
       )}
+      value={value}
       {...props}
     >
       <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">

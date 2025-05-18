@@ -122,7 +122,7 @@ const Recipes = () => {
                 <SelectValue placeholder="Toutes les régions" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Toutes les régions</SelectItem>
+                <SelectItem value="all-regions">Toutes les régions</SelectItem>
                 {regions.map((region) => (
                   <SelectItem key={region.id} value={region.id}>
                     {region.name}
@@ -141,7 +141,7 @@ const Recipes = () => {
                 <SelectValue placeholder="Toutes les catégories" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Toutes les catégories</SelectItem>
+                <SelectItem value="all-categories">Toutes les catégories</SelectItem>
                 <SelectItem value="plat">Plat principal</SelectItem>
                 <SelectItem value="entrée">Entrée</SelectItem>
                 <SelectItem value="dessert">Dessert</SelectItem>
