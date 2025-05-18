@@ -29,7 +29,7 @@ const Navbar = () => {
           {/* Logo and title */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-              <span className="text-xl font-poppins font-bold">CuisineMaghreb</span>
+              <span className="text-xl font-poppins font-bold">Daouq Almaghrib</span>
             </Link>
           </div>
           
